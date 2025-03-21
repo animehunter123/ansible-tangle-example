@@ -1,7 +1,5 @@
 # Description
-This is a example of a ansible playbook that is tangled with ORG mode to match the design that Mike showed us.
-
-The goal of it is to produce *.yml files from the *.org files in the ./playbooks folder, then you can run it with main.yml to target a inventory host.
+This is a sample folder of code which is used for producing *.yml files from the *.org files in the ./playbooks folder, then you can run it with main.yml to target a host in the inventory.yml file.
 
 # Requirements (on linux host)
 * Linux Host to launch Ansible 
@@ -17,4 +15,18 @@ The goal of it is to produce *.yml files from the *.org files in the ./playbooks
 * Launch the playbook via:
 ```bash
 ansible-playbook -i inventory/inventory.yml playbooks/main.yml
+```
+
+# Example output
+```bash
+> ansible-playbook -i inventory/inventory.yml playbooks/main.yml
+PLAY [My playbook] ************************************************************************************************************************************************************************************************************************************************
+TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************ok: [192.168.0.99]
+
+TASK [Print a message] ********************************************************************************************************************************************************************************************************************************************ok: [192.168.0.99] => {
+    "msg": "Hello from the playbook!"
+}
+
+PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************192.168.0.287               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
 ```
