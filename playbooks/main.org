@@ -1,0 +1,10 @@
+* Main Playbook
+:PROPERTIES:
+:header-args: :tangle main.yml
+:END:
+
+#+begin_src yaml
+---
+- import_playbook: hello.yml
+# - import_playbook: set-timezone.yml
+#+end_src

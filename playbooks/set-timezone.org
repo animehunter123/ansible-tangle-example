@@ -1,0 +1,17 @@
+* Set Timezone Playbook
+
+** Playbook Configuration
+:PROPERTIES:
+:header-args: :tangle set-timezone.yml
+:END:
+
+#+begin_src yaml
+---
+- name: set-timezone
+  gather_facts: false
+  hosts: sas
+  tasks:
+    - name: set the timezone to GMT
+      ansible.builtin.timezone:
+        name: GMT
+#+end_src

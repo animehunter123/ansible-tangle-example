@@ -1,0 +1,31 @@
+* Hello Playbook
+
+This Org file contains an Ansible playbook that prints a "Hello" message.
+
+NOTE BY ANSIBLE DEFINITION, EVERY SINGLE PLAY IN A PLAYBOOK MUST HAVE A LINE WITH "hosts: sas"!!!
+NOTE BY ANSIBLE DEFINITION, EVERY SINGLE PLAY IN A PLAYBOOK MUST HAVE A LINE WITH "hosts: sas"!!!
+NOTE BY ANSIBLE DEFINITION, EVERY SINGLE PLAY IN A PLAYBOOK MUST HAVE A LINE WITH "hosts: sas"!!!
+
+** Playbook Configuration
+:PROPERTIES:
+:header-args:yaml: :tangle hello.yml
+:END:
+
+#+begin_src yaml
+---
+- name: My playbook
+  hosts: sas
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "Hello from the playbook!"
+#+end_src
+
+** Commented Import Statement
+
+The following import statement is commented out in the original YAML file.
+We'll include it here as a comment for reference.
+
+#+begin_src yaml :tangle no
+#- import_playbook: playbooks/main.yml
+#+end_src

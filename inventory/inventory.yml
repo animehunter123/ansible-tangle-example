@@ -1,0 +1,11 @@
+sas:
+  hosts:
+    192.168.0.287:
+      # If you DIRECTLY run the commands as root, enable this. (We dont do this!)
+      ansible_user: root
+
+      # If you do this via sudo, use these:
+      # ansible_become: true
+      # ansible_become_user: root
+      # ansible_become_method: sudo
+      
