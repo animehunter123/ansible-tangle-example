@@ -2,12 +2,12 @@
 #+BEGIN_SRC ansible
 - hosts: all
   tasks:
-    - name: Install App01
-      # THIS IS A EXAMPLE installation task !!!
-
-    - name: Add App01 to PATH in /etc/bashrc
-      ansible.builtin.lineinfile:
+    - name: Add App01 to PATH
+      ansible.builtin.blockinfile:
         path: /etc/bashrc
-        line: 'export PATH=$PATH:/path/to/app01/bin'
+        block: |
+          # Added by Ansible for App01
+          export PATH=$PATH:/path/to/app01/bin
+        marker: "# {mark} ANSIBLE MANAGED BLOCK - App01"
         state: present
 #+END_SRC
