@@ -1,0 +1,46 @@
+#+TITLE: Config
+#+PROPERTIES: :header-args: :tangle config.yml :padline no
+#+STARTUP: showeverything
+
+* Overview :toc:
+- [[#overview][Overview]]
+- [[#share_location][share_location]]
+- [[#temp_dir][temp_dir]]
+- [[#password][Password]]
+- [[#test-users][TEST Users]]]
+
+* Overview
+This Org file contains configuration settings for various applications to build our TEST server.
+
+** share_location
+This is the _webserver_ and path that hosts all the installation file stuff. We shall notr use spaces in the URL to avoid having to do any URL encoding which breaks underlying scripts.
+
+The releevant path is: *\\MYNAS.TEST.LOCAL\Software\GOTS\BLAH*
+
+#+BEGIN_SRC yaml
+share_location: \\\\MYNAS.TEST.LOCAL\\Software\\GOTS\\BLAH
+#+END_SRC
+
+** temp_dir
+This is the temporary directory where we will download and extract the installation files.
+
+#+BEGIN_SRC yaml
+temp_dir: /tmp/ANSIBLE_STAGING_AREA
+#+END_SRC
+
+** Password
+This is the password for the TEST users.
+
+#+BEGIN_SRC yaml
+password: Password123
+#+END_SRC
+
+** TEST Users
+This is the list of TEST users.
+
+#+BEGIN_SRC yaml
+test-users:
+  - name: test01
+  - name: test02
+  - name: test03
+#+END_SRC
