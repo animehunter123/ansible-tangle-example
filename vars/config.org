@@ -13,7 +13,7 @@
 This Org file contains configuration settings for various applications to build our TEST server.
 
 ** share_location
-This is the _webserver_ and path that hosts all the installation file stuff. We shall notr use spaces in the URL to avoid having to do any URL encoding which breaks underlying scripts.
+This is the _webserver_ and path that hosts all the installation file stuff. We shall not use spaces in the URL to avoid having to do any URL encoding which breaks underlying scripts.
 
 The releevant path is: *\\MYNAS.TEST.LOCAL\Software\GOTS\BLAH*
 
