@@ -1,0 +1,13 @@
+* Install App01
+#+BEGIN_SRC ansible
+- hosts: all
+  tasks:
+    - name: Install App01
+      # THIS IS A EXAMPLE installation task !!!
+
+    - name: Add App01 to PATH in /etc/bashrc
+      ansible.builtin.lineinfile:
+        path: /etc/bashrc
+        line: 'export PATH=$PATH:/path/to/app01/bin'
+        state: present
+#+END_SRC
