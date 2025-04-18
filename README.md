@@ -1,6 +1,14 @@
 # Description
 This is a sample folder of code which is used for producing *.yml files from the *.org files in the ./playbooks folder, then you can run it with main.yml to target a host in the inventory.yml file.
 
+TIP: To Untangle:
+
+* With Emacs Buffer: Press C-c C-v t (hold Control and press c, then Control and v, then t). This runs org-babel-tangle in the current buffer and converts the .org to a .py or .yml etc!
+
+* Via Emacs 1 file: ```emacs --batch -l org --eval '(org-babel-tangle-file "yourfile.org")' ```
+
+* Via Emacs Batch many files: ```emacs -Q --batch --eval "(progn (require 'ob-tangle) (dolist (file command-line-args-left) (with-current-buffer (find-file-noselect file) (org-babel-tangle))))" yourfile1.org yourfile2.org ```
+
 # Requirements (on linux host)
 * Linux Host to launch Ansible 
 * You must have installed: emacs
